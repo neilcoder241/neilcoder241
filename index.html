@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're Beautiful</title>
+    <style>
+        /* Global styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            color: #333;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff66b2; /* Pink color for "You're Beautiful" text */
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        /* Tulip container styling */
+        .tulips {
+            display: flex;
+            justify-content: space-around;
+            width: 60%;
+            margin-top: 50px;
+        }
+
+        .tulip {
+            position: relative;
+            width: 50px;
+            height: 100px;
+            background-color: #ff66b2; /* Pink tulip color */
+            border-radius: 50% 50% 0 0;
+            margin-bottom: 20px;
+            animation: bloom 2s ease-out infinite;
+        }
+
+        .tulip:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background-color: #ff66b2;
+            border-radius: 50%;
+        }
+
+        .tulip:after {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 50px;
+            background-color: #228B22; /* Green stem */
+        }
+
+        @keyframes bloom {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>You're Beautiful</h1>
+
+    <div class="tulips">
+        <div class="tulip"></div>
+        <div class="tulip"></div>
+        <div class="tulip"></div>
+    </div>
+
+</body>
+</html>
